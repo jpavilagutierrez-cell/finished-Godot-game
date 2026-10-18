@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dprbrrbc2tc8u"]
+
+[ext_resource type="Texture2D" uid="uid://c14ib6fufmu84" path="res://Assets/horror game design.png" id="1_ctl4c"]
+[ext_resource type="Script" uid="uid://dqour4qvcxnu8" path="res://scripts/end_of_the_game.gd" id="1_tll0c"]
+[ext_resource type="PackedScene" uid="uid://u0h4mu1kolvp" path="res://scenes/fade_transition.tscn" id="3_p56ts"]
+
+[node name="end of the game" type="Node2D" unique_id=16389922]
+script = ExtResource("1_tll0c")
+
+[node name="HorrorGameDesign" type="Sprite2D" parent="." unique_id=1389310526]
+position = Vector2(562, 500)
+texture = ExtResource("1_ctl4c")
+
+[node name="backtomenu" type="Button" parent="." unique_id=552550358]
+offset_left = 485.0
+offset_top = 383.0
+offset_right = 671.0
+offset_bottom = 448.0
+text = "Back to main menu"
+
+[node name="Fade_transition" parent="." unique_id=1703938721 instance=ExtResource("3_p56ts")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=480245966]
+
+[connection signal="pressed" from="backtomenu" to="." method="_on_backtomenu_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

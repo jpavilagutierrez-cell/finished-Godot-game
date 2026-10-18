@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://xroyfx8oiqnn"]
+
+[ext_resource type="Script" uid="uid://cd31o7fhdspnw" path="res://scripts/endmaze.gd" id="1_05vv3"]
+[ext_resource type="PackedScene" uid="uid://blsksfht812jq" path="res://Assets/flashlight (2)/scene.gltf" id="2_3eadt"]
+[ext_resource type="PackedScene" uid="uid://bw7y4rcg0sue" path="res://Assets/psx-first-person-arms-free-game-assets/arms_rig.fbx" id="2_tory2"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_firpv"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t3c21"]
+points = PackedVector3Array(-0.125207, -0.532801, -0.480507, 0.0227831, 0.47607, 0.498884, 0.169713, 0.559144, 0.464172, 0.231051, -0.803591, 0.320455, 0.40741, 0.651043, -0.243523, -0.482789, 0.594843, 0.0822132, -0.362868, -0.682312, 0.289697, 0.469044, -0.654529, -0.0662713, -0.127444, 0.842701, -0.338103, -0.393435, -0.683942, -0.244717, 0.438255, 0.623309, 0.200849, 0.0841477, 0.977454, 0.114795, -0.0682023, -0.976458, -0.12927, 0.20055, -0.563129, -0.451454, -0.185527, 0.595453, -0.453475, -0.273363, 0.592268, 0.407754, -0.00693649, -0.476823, 0.49966, 0.375821, -0.588614, 0.316955, 0.111579, 0.563059, -0.481177, -0.41725, 0.527866, -0.270497, -0.484546, -0.596972, -0.0665097, -0.279747, 0.908561, 0.0533361, -0.250197, -0.880712, 0.205319, 0.263647, -0.902771, -0.127394, 0.293368, 0.871526, -0.157196, 0.373412, -0.526319, -0.328246, 0.499663, 0.476641, -0.00688856, 0.0531056, 0.875001, 0.324703, -0.154543, -0.590854, 0.465879, -0.0972799, -0.782358, -0.398188, -0.387649, -0.498171, 0.31565, -0.30068, -0.587995, -0.388901)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_72ieh"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4dohe"]
+
+[node name="player" type="CharacterBody3D" unique_id=971669254]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.46823, 0)
+script = ExtResource("1_05vv3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1469785037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03256, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_firpv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=234120259]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.03256, 0)
+visible = false
+shape = SubResource("ConvexPolygonShape3D_t3c21")
+
+[node name="head" type="Node3D" parent="." unique_id=305318768]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7538, 0)
+
+[node name="body parts" type="Node3D" parent="head" unique_id=2048171539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.7538002, 0)
+
+[node name="leg" type="MeshInstance3D" parent="head/body parts" unique_id=917913118]
+transform = Transform3D(0.22244708, 0, 0, 0, 0.63781345, 0, 0, 0, 0.3607017, -0.32372078, 0.6065805, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_72ieh")
+
+[node name="leg2" type="MeshInstance3D" parent="head/body parts" unique_id=829854263]
+transform = Transform3D(0.22244708, 0, 0, 0, 0.63781345, 0, 0, 0, 0.3607017, 0.3486549, 0.60737705, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_72ieh")
+
+[node name="arm2" type="MeshInstance3D" parent="head/body parts" unique_id=1888508360]
+transform = Transform3D(0.3342533, -0.013300404, -0.0009936541, 2.2217752e-09, 0.06964107, -0.33688587, 0.007935494, 0.5602298, 0.041854043, 0.33669657, 1.1397684, -0.44224048)
+visible = false
+mesh = SubResource("CapsuleMesh_4dohe")
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=1776237173]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="head/Camera3D" unique_id=446620287]
+transform = Transform3D(0.9783215, 0, 0.20709218, 0, 1, 0, -0.20709218, 0, 0.9783215, 0.39181036, -0.5288322, -0.8571239)
+light_energy = 16.0
+spot_range = 13.864281
+spot_angle = 25.988354
+
+[node name="arm" type="MeshInstance3D" parent="head/Camera3D" unique_id=360335579]
+transform = Transform3D(0.3342533, -0.013300404, -0.0009936541, 2.2217752e-09, 0.06964107, -0.33688587, 0.007935494, 0.5602298, 0.041854043, -0.30592757, -0.6140318, -0.44224048)
+visible = false
+mesh = SubResource("CapsuleMesh_4dohe")
+skeleton = NodePath("../../body parts")
+
+[node name="arms_rig" parent="head/Camera3D" unique_id=989293664 instance=ExtResource("2_tory2")]
+transform = Transform3D(-1.7721233, 0, 0.054878034, 0, 1.8353636, 0, -0.041267235, 0, -2.3566067, -0.042001903, -3.2851057, 0.07164347)
+
+[node name="torch" parent="head/Camera3D" unique_id=1805273562 instance=ExtResource("2_3eadt")]
+transform = Transform3D(-0.20766632, 0, 0.007829934, 0, 0.14876364, 0, -0.0079559535, 0, -0.20437637, 0.4530791, -0.57601166, -0.5744317)

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c3shwtqjonhrx"]
+
+[ext_resource type="PackedScene" uid="uid://k0ur8l04bav" path="res://characters/Zombie Idle.fbx" id="1_0r3o7"]
+[ext_resource type="PackedScene" uid="uid://ytg88x44j3i2" path="res://characters/Zombie Running.fbx" id="2_qvory"]
+
+[node name="creature" type="CharacterBody3D" unique_id=1963963356]
+transform = Transform3D(0.5468166, 0, 0, 0, 0.563236, 0, 0, 0, 0.7838903, 0, 0, 0)
+
+[node name="Zombie Running" parent="." unique_id=1869213136 instance=ExtResource("2_qvory")]
+
+[node name="Zombie Idle" parent="." unique_id=325411642 instance=ExtResource("1_0r3o7")]

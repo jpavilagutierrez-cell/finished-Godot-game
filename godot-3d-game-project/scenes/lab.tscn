@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://cm5bno3v0cv0r"]
+
+[ext_resource type="PackedScene" uid="uid://mdhr7pa4cx76" path="res://prefabs/floor.tscn" id="1_bb6uc"]
+[ext_resource type="PackedScene" uid="uid://xroyfx8oiqnn" path="res://characters/player.tscn" id="2_hem3r"]
+[ext_resource type="ArrayMesh" uid="uid://hh46sqouoj68" path="res://Assets/OBJ format factory/structure-doorway-wide.obj" id="2_hflkp"]
+[ext_resource type="Script" uid="uid://dknip4rovsghf" path="res://scripts/game_manager.gd" id="4_f680m"]
+[ext_resource type="ArrayMesh" uid="uid://bdem05f815nt8" path="res://Assets/kenney_racing-kit/Models/OBJ format/raceCarGreen.obj" id="5_q4uld"]
+[ext_resource type="PackedScene" uid="uid://croau6l0821jg" path="res://scenes/finalplot.tscn" id="6_gipex"]
+
+[node name="lab" type="Node3D" unique_id=341152123]
+
+[node name="player" parent="." unique_id=971669254 instance=ExtResource("2_hem3r")]
+transform = Transform3D(0.999997, 0.0020087634, 0.0013911676, -0.0020087583, 0.999998, -5.0109884e-06, -0.0013911749, 2.221151e-06, 0.99999905, -0.30951238, -4.3068027, 10.3716135)
+
+[node name="StructureDoorwayWide180" type="MeshInstance3D" parent="." unique_id=1814823266]
+transform = Transform3D(1.7564365, -0.059419006, 0.019017078, 0.035751034, 2.977667, -0.08583794, -0.015708826, 0.13295083, 1.9309897, -0.45195466, -5.318272, 11.979113)
+mesh = ExtResource("2_hflkp")
+skeleton = NodePath("../..")
+
+[node name="floor" parent="." unique_id=1863869608 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4339695, -6.175188, -3.8425264)
+
+[node name="floor2" parent="." unique_id=551590370 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(0.99996996, 0, -0.007749184, 0.0077408645, 0.046321884, 0.99889654, 0.00035895722, -0.99892676, 0.046320543, 1.0232697, 8.518406, 13.7272835)
+
+[node name="floor6" parent="." unique_id=1057960171 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(0.99996996, 0, -0.007749184, -0.00011346888, -0.99989295, -0.014642321, -0.007748352, 0.01464282, -0.9998627, 1.0232697, 35.18136, 2.8301125)
+
+[node name="floor3" parent="." unique_id=391397412 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(-0.054784134, 0.9974461, -0.045830116, 0.007740865, 0.04632188, 0.99889654, 0.9984682, 0.05436893, -0.010258799, -23.761238, 6.6449413, 4.6281357)
+
+[node name="floor4" parent="." unique_id=1729328395 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(-0.9998251, 0.017363954, 0.0069428356, 0.007740866, 0.04632188, 0.99889666, 0.017023183, 0.9987759, -0.04644824, -0.3705635, 11.02186, -19.435383)
+
+[node name="floor5" parent="." unique_id=885919157 instance=ExtResource("1_bb6uc")]
+transform = Transform3D(0.015036205, -0.9988193, 0.046201807, 0.007740865, 0.046321876, 0.9988966, -0.999857, -0.014661977, 0.008428227, 27.857656, 11.283148, -4.0871468)
+
+[node name="texts2D" type="Node2D" parent="." unique_id=574175134]
+
+[node name="objectives2" type="Label" parent="texts2D" unique_id=1507447963]
+modulate = Color(0.62152416, 0.6215238, 0.6215237, 1)
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 322.0
+offset_bottom = 113.0
+text = "Objectives:
+- Escape the maze
+- Lose sight of the creature
+- Enter the Lab"
+
+[node name="objectives" type="Label" parent="texts2D" unique_id=879553723]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 322.0
+offset_bottom = 113.0
+text = "Objectives:
+---------------------------
+-----------------------------------------
+- ---------------------
+- enter the car and escape this nightmare"
+
+[node name="HUD" type="Label" parent="texts2D" unique_id=62831697]
+offset_left = 31.0
+offset_top = 612.0
+offset_right = 114.0
+offset_bottom = 638.0
+text = "Recording:"
+metadata/_edit_use_anchors_ = true
+
+[node name="rec" type="Label" parent="texts2D/HUD" unique_id=2071089744]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = -29.0
+offset_top = -70.0
+offset_right = -24.0
+offset_bottom = -47.0
+scale = Vector2(5.6607056, 4.885132)
+text = "."
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="Label" parent="texts2D/HUD" unique_id=482008787]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -180.0
+offset_right = 79.0
+offset_bottom = -154.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD4" type="Label" parent="texts2D/HUD" unique_id=949761506]
+layout_mode = 0
+offset_left = 1077.0
+offset_top = -178.0
+offset_right = 1160.0
+offset_bottom = -152.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD5" type="Label" parent="texts2D/HUD" unique_id=1285369156]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = -450.0
+offset_right = 1161.0
+offset_bottom = -424.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD8" type="Label" parent="texts2D/HUD" unique_id=1472167962]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -435.0
+offset_right = 80.0
+offset_bottom = -409.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD2" type="Label" parent="texts2D/HUD" unique_id=2013927140]
+layout_mode = 0
+offset_left = -25.000002
+offset_top = -67.0
+offset_right = 58.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD3" type="Label" parent="texts2D/HUD" unique_id=148441342]
+layout_mode = 0
+offset_left = 986.0
+offset_top = -67.0
+offset_right = 1069.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD6" type="Label" parent="texts2D/HUD" unique_id=596608]
+layout_mode = 0
+offset_left = 987.00006
+offset_top = -414.0
+offset_right = 1070.0
+offset_bottom = -388.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD7" type="Label" parent="texts2D/HUD" unique_id=1286494256]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -400.0
+offset_right = 60.0
+offset_bottom = -374.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="dot" type="Label" parent="texts2D/HUD" unique_id=1779182705]
+layout_mode = 0
+offset_left = 537.0
+offset_top = -329.0
+offset_right = 620.0
+offset_bottom = -280.0
+scale = Vector2(2.5741954, 3.0004444)
+text = ".
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Game manager" type="Node" parent="." unique_id=1692607086]
+script = ExtResource("4_f680m")
+
+[node name="timer" type="Label" parent="Game manager" unique_id=1234296679]
+offset_left = 121.0
+offset_top = 613.0
+offset_right = 161.0
+offset_bottom = 636.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1726140247]
+transform = Transform3D(1, 0, 0, 0, -0.015567757, 0.9998788, 0, -0.9998788, -0.015567757, -9.152799, 39.0013, -14.267971)
+light_energy = 16.0
+spot_range = 70.43434
+
+[node name="RaceCarGreen" type="MeshInstance3D" parent="." unique_id=1181041841]
+transform = Transform3D(4.3306603, 0, 4.1430054, 0, 3.8969166, 0, 5.2467914, 0, -3.419604, 2.3949738, -5.321835, -7.6872435)
+mesh = ExtResource("5_q4uld")
+
+[node name="finalplot" parent="." unique_id=243954775 instance=ExtResource("6_gipex")]
+transform = Transform3D(0.41704157, -0.21050477, -0.035674505, 1.561448e-09, -0.018827112, 1.1417696, -0.30558613, -0.28728145, -0.04868596, 2.558203, -4.7817926, -8.645403)
+
+[node name="finalplot2" parent="." unique_id=850143587 instance=ExtResource("6_gipex")]
+transform = Transform3D(0.41704157, -0.21050477, -0.035674505, 1.561448e-09, -0.018827112, 1.1417696, -0.30558613, -0.28728145, -0.04868596, 3.5898886, -4.7817926, -7.4063826)

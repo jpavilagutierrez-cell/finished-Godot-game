@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dnlwfie0m8wu5"
+path="res://.godot/imported/conveyor-stripe-sides-junction-t.obj-46eb1bac1ed25c867329614483b0cbee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/conveyor-stripe-sides-junction-t.obj-46eb1bac1ed25c867329614483b0cbee.mesh"]
+
+source_file="res://Assets/OBJ format factory/conveyor-stripe-sides-junction-t.obj"
+dest_files=["res://.godot/imported/conveyor-stripe-sides-junction-t.obj-46eb1bac1ed25c867329614483b0cbee.mesh", "res://.godot/imported/conveyor-stripe-sides-junction-t.obj-46eb1bac1ed25c867329614483b0cbee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

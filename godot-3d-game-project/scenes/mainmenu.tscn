@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bgf7rsgowijhu"]
+
+[ext_resource type="Script" uid="uid://b1xq7wjkncqkg" path="res://scripts/main_menu.gd" id="1_natt5"]
+[ext_resource type="Texture2D" uid="uid://ckpjfu88vpsyf" path="res://Assets/main menu picture/Screenshot 2026-08-18 100058.png" id="2_r3g3c"]
+[ext_resource type="PackedScene" uid="uid://u0h4mu1kolvp" path="res://scenes/fade_transition.tscn" id="3_r3g3c"]
+
+[node name="Main menu" type="Node2D" unique_id=1742583117]
+script = ExtResource("1_natt5")
+
+[node name="Screenshot20260818100058" type="Sprite2D" parent="." unique_id=1092787067]
+position = Vector2(574, 322)
+scale = Vector2(1.1177607, 1.1560284)
+texture = ExtResource("2_r3g3c")
+
+[node name="start" type="Button" parent="." unique_id=1529680365]
+offset_left = 564.0
+offset_top = 259.0
+offset_right = 660.0
+offset_bottom = 276.0
+
+[node name="controls" type="Button" parent="." unique_id=30088443]
+offset_left = 580.0
+offset_top = 278.0
+offset_right = 649.0
+offset_bottom = 292.0
+
+[node name="Fade_transition" parent="." unique_id=1887073594 instance=ExtResource("3_r3g3c")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=30624126]
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="start" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="controls" to="." method="_on_controls_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

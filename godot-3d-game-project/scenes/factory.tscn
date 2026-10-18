@@ -1,0 +1,419 @@
+[gd_scene format=3 uid="uid://bfkxwllvbicrk"]
+
+[ext_resource type="Texture2D" uid="uid://08bph5oxy6sa" path="res://Assets/earth-texture/696.jpg" id="1_1adwy"]
+[ext_resource type="PackedScene" uid="uid://u0h4mu1kolvp" path="res://scenes/fade_transition.tscn" id="1_kmb23"]
+[ext_resource type="PackedScene" uid="uid://ctq2t51u5sy02" path="res://prefabs/maze_bush.tscn" id="2_quloc"]
+[ext_resource type="PackedScene" uid="uid://xroyfx8oiqnn" path="res://characters/player.tscn" id="3_k2tyu"]
+[ext_resource type="ArrayMesh" uid="uid://w5qark3421fs" path="res://Assets/OBJ format/rocks.obj" id="4_k2tyu"]
+[ext_resource type="PackedScene" uid="uid://ckywmg44fo1gx" path="res://prefabs/rocks.tscn" id="4_quloc"]
+[ext_resource type="ArrayMesh" uid="uid://wxc4g5ficgis" path="res://Assets/OBJ format/rocks-tall.obj" id="5_6h0me"]
+[ext_resource type="PackedScene" uid="uid://0bgros2slim0" path="res://prefabs/fence.tscn" id="7_1gd16"]
+[ext_resource type="PackedScene" uid="uid://ynbeljnva6pf" path="res://prefabs/door.tscn" id="8_1gd16"]
+[ext_resource type="PackedScene" uid="uid://bvn4haekwc71j" path="res://prefabs/outline.tscn" id="9_h6i3v"]
+[ext_resource type="PackedScene" uid="uid://mdhr7pa4cx76" path="res://prefabs/floor.tscn" id="10_ddau0"]
+[ext_resource type="Script" uid="uid://bl0xgy5y6i4ly" path="res://scripts/map_camera.gd" id="11_a3ydg"]
+[ext_resource type="Script" uid="uid://b331pwq8tvc4l" path="res://scripts/minimap camera test.gd" id="12_ch75v"]
+[ext_resource type="PackedScene" uid="uid://dqe204igdc163" path="res://scenes/entering_lab.tscn" id="13_ch75v"]
+[ext_resource type="Script" uid="uid://dknip4rovsghf" path="res://scripts/game_manager.gd" id="14_bgghg"]
+[ext_resource type="PackedScene" uid="uid://hliybtfktrad" path="res://zombie animation/Zombie Idle (1).fbx" id="15_lvbv1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6h0me"]
+albedo_texture = ExtResource("1_1adwy")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ayg0a"]
+size = Vector3(823, 0.1, 529)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bgghg"]
+sky_top_color = Color(0.32008347, 0.61350834, 0.721498, 1)
+sky_horizon_color = Color(0.7418629, 0.8073428, 0.82693064, 1)
+ground_bottom_color = Color(0.2017752, 0.17027012, 0.1406317, 1)
+ground_horizon_color = Color(0.7418629, 0.8073428, 0.82693064, 1)
+
+[sub_resource type="Sky" id="Sky_d644g"]
+sky_material = SubResource("ProceduralSkyMaterial_bgghg")
+
+[sub_resource type="Environment" id="Environment_lvbv1"]
+background_mode = 2
+background_energy_multiplier = 0.55
+sky = SubResource("Sky_d644g")
+ambient_light_energy = 0.0
+tonemap_exposure = 0.1
+glow_enabled = true
+glow_strength = 2.0
+fog_light_energy = 2.0
+
+[node name="Factory" type="Node3D" unique_id=1997878122]
+
+[node name="Fade_transition" parent="." unique_id=1703938721 instance=ExtResource("1_kmb23")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=844177446]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1349128968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3089104, 0.7672119, 1.1651058)
+material_override = SubResource("StandardMaterial3D_6h0me")
+size = Vector3(175.64801, 0.162, 147.76434)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D" unique_id=1319285675]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D" unique_id=1628651354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.48805, 0.042420983, 143.4924)
+shape = SubResource("BoxShape3D_ayg0a")
+
+[node name="lighting" type="Node3D" parent="." unique_id=366062328]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="lighting" unique_id=1315576917]
+transform = Transform3D(1, 0, 0, 0, -0.05170844, 0.99866223, 0, -0.99866223, -0.05170844, 0, 23.369001, 0)
+light_color = Color(0, 0, 0, 1)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+sky_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="lighting" unique_id=166033088]
+environment = SubResource("Environment_lvbv1")
+
+[node name="player" parent="." unique_id=971669254 instance=ExtResource("3_k2tyu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8998339, 41.444633)
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="." unique_id=1616843058]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(200, 180)
+offset_left = -8.0
+offset_right = 1155.0
+offset_bottom = 644.0
+stretch = true
+
+[node name="map light" type="DirectionalLight2D" parent="SubViewportContainer2" unique_id=1115522866]
+position = Vector2(-955, 0)
+energy = 9.05
+
+[node name="minimap" type="SubViewport" parent="SubViewportContainer2" unique_id=1865524007]
+handle_input_locally = false
+size = Vector2i(1163, 644)
+render_target_update_mode = 0
+
+[node name="Button" type="Button" parent="SubViewportContainer2" unique_id=1985294548]
+layout_mode = 2
+toggle_mode = true
+
+[node name="map camera" type="Camera3D" parent="SubViewportContainer2" unique_id=1237643450]
+transform = Transform3D(1, 0, 0, 0, 0.08771214, 0.9961459, 0, -0.9961459, 0.08771214, 6.565524, 18.028448, 31.637215)
+projection = 1
+size = 8.103839
+script = ExtResource("11_a3ydg")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=970720790]
+custom_minimum_size = Vector2(200, 180)
+offset_left = 955.0
+offset_right = 1155.0
+offset_bottom = 180.0
+stretch = true
+
+[node name="minimap" type="SubViewport" parent="SubViewportContainer" unique_id=222982611]
+handle_input_locally = false
+size = Vector2i(200, 180)
+render_target_update_mode = 4
+
+[node name="minimap camera" type="Camera3D" parent="SubViewportContainer/minimap" unique_id=1753972173 node_paths=PackedStringArray("player")]
+transform = Transform3D(1, 0, 0, 0, 0.08771214, 0.9961459, 0, -0.9961459, 0.08771214, 6.565524, 18.028448, 31.637215)
+projection = 1
+size = 8.103839
+script = ExtResource("12_ch75v")
+player = NodePath("../../../player")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewportContainer/minimap/minimap camera" unique_id=1728128604]
+transform = Transform3D(0.9999239, -4.4394738e-10, 0.012339165, -0.0010494674, 0.9963765, 0.0850453, -0.012294454, -0.08505177, 0.99630064, -0.9755125, 0.73474693, -0.7017174)
+light_energy = 45.0
+spot_range = 87.261475
+spot_angle = 25.988354
+
+[node name="Maze end" type="Node3D" parent="." unique_id=1099431912]
+
+[node name="Maze bush64" parent="Maze end" unique_id=1167358594 instance=ExtResource("2_quloc")]
+transform = Transform3D(0.0811018, -0.012625344, 0.98411894, -0.07437091, 2.0314848, 0.006325376, -5.32854, -0.028545793, 0.014890263, 1.6120548, 1.1609157, 54.1576)
+
+[node name="Maze bush65" parent="Maze end" unique_id=855425867 instance=ExtResource("2_quloc")]
+transform = Transform3D(0.12112058, -0.012801431, 0.96888363, -0.11106842, 2.0598183, 0.0062274523, -7.957849, -0.028943924, 0.014659745, -1.784595, 1.1609157, 60.76597)
+
+[node name="Maze bush66" parent="Maze end" unique_id=757277077 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, -3.9326992, 0.9924067, 40.378628)
+
+[node name="Maze bush67" parent="Maze end" unique_id=1835293476 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, -20.085644, 0.76241076, 40.30362)
+
+[node name="Maze bush68" parent="Maze end" unique_id=76661123 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.005067871, -0.07265221, 2.0300295, 0.006394055, -0.02698505, 0.012901924, -0.994905, -35.926422, 0.5993196, 40.23881)
+
+[node name="Maze bush69" parent="Maze end" unique_id=1478598706 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, 46.817505, 1.637648, 40.747227)
+
+[node name="Maze bush72" parent="Maze end" unique_id=2113845251 instance=ExtResource("2_quloc")]
+transform = Transform3D(-0.13951205, 0.014114995, -0.9724008, -0.5415352, 2.2131648, 0.006249382, 38.804264, 0.030936727, -0.0034088404, 49.15879, 1.637648, -60.41964)
+
+[node name="Maze bush73" parent="Maze end" unique_id=1729484221 instance=ExtResource("2_quloc")]
+transform = Transform3D(38.79765, 0.030612666, 0.018381769, -0.5415352, 2.2131648, 0.006249382, -0.7300567, -0.0148046855, 0.9722329, -51.51554, 1.637648, -55.679447)
+
+[node name="Maze bush74" parent="Maze end" unique_id=1335722980 instance=ExtResource("2_quloc")]
+transform = Transform3D(-1.8421546, -0.015676316, 0.9713062, -0.5415352, 2.2131648, 0.006249382, -38.76077, -0.030175608, -0.04624987, -51.21169, 1.637648, 21.610897)
+
+[node name="Maze bush70" parent="Maze end" unique_id=1153508818 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, 30.664558, 1.4081889, 40.67222)
+
+[node name="Maze bush71" parent="Maze end" unique_id=1649552080 instance=ExtResource("2_quloc")]
+transform = Transform3D(-5.205932, -0.02839729, 0.005067871, -0.07265221, 2.0300295, 0.006394055, -0.02698505, 0.012901924, -0.994905, 14.82378, 1.1908966, 40.60741)
+
+[node name="rock border" type="Node3D" parent="." unique_id=347765613]
+
+[node name="rocks" parent="rock border" unique_id=875808684 instance=ExtResource("4_quloc")]
+transform = Transform3D(1.8088423, 0, 0, 0, 5.91035, 0, 0, 0, 1, -0.2598009, 0.88696814, 47.69535)
+
+[node name="rocks2" parent="rock border" unique_id=1699208979 instance=ExtResource("4_quloc")]
+transform = Transform3D(-1.8073926, 0, -0.040027082, 0, 5.9103494, 0, 0.072402686, 0, -0.9991986, 0.021991253, 1.2627583, 47.69535)
+
+[node name="rocks3" parent="rock border" unique_id=835002717 instance=ExtResource("4_quloc")]
+transform = Transform3D(1.8011233, 0, 0.09228365, 0, 5.910349, 0, -0.1669266, 0, 0.99573267, 0.11567068, 1.2627583, 47.69535)
+
+[node name="rocks4" parent="rock border" unique_id=1338052628 instance=ExtResource("4_quloc")]
+transform = Transform3D(-1.8084909, 0, 0.019703634, 0, 5.9103484, 0, -0.03564073, 0, -0.9998058, -0.6323662, 1.2627583, 47.69535)
+
+[node name="RocksTall" type="MeshInstance3D" parent="rock border" unique_id=1737514588]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38027334, 0.85963285, 47.001007)
+mesh = ExtResource("5_6h0me")
+skeleton = NodePath("../..")
+
+[node name="Rocks" type="MeshInstance3D" parent="rock border" unique_id=1449997133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52207935, 0.85963285, 46.872513)
+mesh = ExtResource("4_k2tyu")
+skeleton = NodePath("../..")
+
+[node name="Rocks2" type="MeshInstance3D" parent="rock border" unique_id=1417094699]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1276044, 0.85963285, 46.556076)
+mesh = ExtResource("4_k2tyu")
+
+[node name="RocksTall2" type="MeshInstance3D" parent="rock border" unique_id=1525719149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21404046, 0.85963285, 46.319885)
+mesh = ExtResource("5_6h0me")
+skeleton = NodePath("../..")
+
+[node name="Rocks3" type="MeshInstance3D" parent="rock border" unique_id=314821839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8277352, 0.85963285, 45.779945)
+mesh = ExtResource("4_k2tyu")
+skeleton = NodePath("../..")
+
+[node name="fences" parent="." unique_id=74272794 instance=ExtResource("7_1gd16")]
+
+[node name="the building" type="Node3D" parent="." unique_id=1678634145]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04365349, 0, 2.9550915)
+
+[node name="StaticBody3D" parent="the building" unique_id=2019557827 instance=ExtResource("8_1gd16")]
+transform = Transform3D(0.9999953, 0.002921095, -0.0009622449, -0.0029205654, 0.9999956, 0.00055050314, 0.0009638512, -0.0005476859, 0.9999994, 0, 0, 0)
+
+[node name="outline" parent="the building" unique_id=39886736 instance=ExtResource("9_h6i3v")]
+
+[node name="outline2" parent="the building" unique_id=1010771776 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.385209, -0.19496441)
+
+[node name="outline3" parent="the building" unique_id=947367511 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.874013, -0.19496441)
+
+[node name="outline4" parent="the building" unique_id=623274095 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.452372, -0.19496441)
+
+[node name="outline5" parent="the building" unique_id=105844195 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.851982, -0.19496441)
+
+[node name="outline6" parent="the building" unique_id=1871545482 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.6105, -0.19496441)
+
+[node name="outline7" parent="the building" unique_id=2023486773 instance=ExtResource("9_h6i3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37.232937, 0)
+
+[node name="floor" parent="." unique_id=1863869608 instance=ExtResource("10_ddau0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.664015, 0, -22.01919)
+
+[node name="entering_lab" parent="." unique_id=180226309 instance=ExtResource("13_ch75v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0153112, 5.0138407)
+
+[node name="texts2D" type="Node2D" parent="." unique_id=1802486312]
+
+[node name="player Dot" type="Label" parent="texts2D" unique_id=672609619]
+modulate = Color(0.25882354, 0.7607843, 0, 1)
+offset_left = 1034.0001
+offset_top = -42.0
+offset_right = 1039.0001
+offset_bottom = -19.0
+scale = Vector2(10.688239, 9.692096)
+text = "."
+
+[node name="objectives2" type="Label" parent="texts2D" unique_id=1328761409]
+modulate = Color(0.62152416, 0.6215238, 0.6215237, 1)
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 322.0
+offset_bottom = 113.0
+text = "Objectives:
+- Escape the maze
+- Lose sight of the creature
+"
+
+[node name="objectives" type="Label" parent="texts2D" unique_id=1279510980]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 321.0
+offset_bottom = 87.0
+text = "Objectives:
+---------------------------
+------------------------------------------------------------
+- Enter the Lab"
+
+[node name="texts2D2" type="Node2D" parent="." unique_id=1970542048]
+
+[node name="player Dot" type="Label" parent="texts2D2" unique_id=782887586]
+modulate = Color(0.25882354, 0.7607843, 0, 1)
+offset_left = 1034.0001
+offset_top = -42.0
+offset_right = 1039.0001
+offset_bottom = -19.0
+scale = Vector2(10.688239, 9.692096)
+text = "."
+metadata/_edit_use_anchors_ = true
+
+[node name="objectives" type="Label" parent="texts2D2" unique_id=4211729]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 321.0
+offset_bottom = 87.0
+text = "Objectives:
+- Escape the maze
+- Lose sight of the creature"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="Label" parent="texts2D2" unique_id=1458107040]
+offset_left = 31.0
+offset_top = 612.0
+offset_right = 114.0
+offset_bottom = 638.0
+text = "Recording:"
+metadata/_edit_use_anchors_ = true
+
+[node name="rec" type="Label" parent="texts2D2/HUD" unique_id=1524776836]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = -29.0
+offset_top = -70.0
+offset_right = -24.0
+offset_bottom = -47.0
+scale = Vector2(5.6607056, 4.885132)
+text = "."
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="Label" parent="texts2D2/HUD" unique_id=114953569]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -180.0
+offset_right = 79.0
+offset_bottom = -154.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD4" type="Label" parent="texts2D2/HUD" unique_id=1756469337]
+layout_mode = 0
+offset_left = 1077.0
+offset_top = -178.0
+offset_right = 1160.0
+offset_bottom = -152.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD5" type="Label" parent="texts2D2/HUD" unique_id=743301228]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = -450.0
+offset_right = 1161.0
+offset_bottom = -424.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD8" type="Label" parent="texts2D2/HUD" unique_id=2104699788]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -435.0
+offset_right = 80.0
+offset_bottom = -409.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD2" type="Label" parent="texts2D2/HUD" unique_id=650415399]
+layout_mode = 0
+offset_left = -25.000002
+offset_top = -67.0
+offset_right = 58.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD3" type="Label" parent="texts2D2/HUD" unique_id=573104745]
+layout_mode = 0
+offset_left = 986.0
+offset_top = -67.0
+offset_right = 1069.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD6" type="Label" parent="texts2D2/HUD" unique_id=231393971]
+layout_mode = 0
+offset_left = 987.00006
+offset_top = -414.0
+offset_right = 1070.0
+offset_bottom = -388.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD7" type="Label" parent="texts2D2/HUD" unique_id=1538625901]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -400.0
+offset_right = 60.0
+offset_bottom = -374.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="dot" type="Label" parent="texts2D2/HUD" unique_id=538814055]
+layout_mode = 0
+offset_left = 537.0
+offset_top = -329.0
+offset_right = 620.0
+offset_bottom = -280.0
+scale = Vector2(2.5741954, 3.0004444)
+text = ".
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Game manager" type="Node" parent="." unique_id=92101670]
+script = ExtResource("14_bgghg")
+
+[node name="timer" type="Label" parent="Game manager" unique_id=1199543383]
+offset_left = 121.0
+offset_top = 613.0
+offset_right = 161.0
+offset_bottom = 636.0
+
+[node name="Zombie Idle (1)" parent="." unique_id=1344251849 instance=ExtResource("15_lvbv1")]
+transform = Transform3D(-1.5202991, -2.7820615e-09, 0.014314247, -0.008126144, 1.0462195, -0.79519534, -0.012504085, -0.6799161, -1.2236052, -0.022643864, 0.31638765, 47.898373)
+
+[connection signal="pressed" from="SubViewportContainer2/Button" to="SubViewportContainer2/map camera" method="_on_button_pressed"]

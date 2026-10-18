@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://div7aaak4x31t"
+path="res://.godot/imported/lightpost-all.obj-bd77c8e23cfaf1c3894c263fc329071c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lightpost-all.obj-bd77c8e23cfaf1c3894c263fc329071c.mesh"]
+
+source_file="res://Assets/OBJ format/lightpost-all.obj"
+dest_files=["res://.godot/imported/lightpost-all.obj-bd77c8e23cfaf1c3894c263fc329071c.mesh", "res://.godot/imported/lightpost-all.obj-bd77c8e23cfaf1c3894c263fc329071c.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

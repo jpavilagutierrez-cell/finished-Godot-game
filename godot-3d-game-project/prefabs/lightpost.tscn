@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b21ppau2y811g"]
+
+[ext_resource type="ArrayMesh" uid="uid://m3eqgmhvajoi" path="res://Assets/kenney_racing-kit/Models/OBJ format/lightPostModern.obj" id="1_0bcys"]
+
+[node name="lightpost" type="MeshInstance3D" unique_id=2130115189]
+transform = Transform3D(0.1942797, 0, 5.8855395, 0, 7.3739114, 0, -5.712081, 0, 0.20017947, 0, 0, 0)
+mesh = ExtResource("1_0bcys")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1405682835]
+transform = Transform3D(0.1748892, 0.00035945466, 0.0052261553, -0.0038494503, -0.0039281384, 0.13489765, 0.0004010629, -0.17065272, 0.0004641899, -0.010414958, 0.7829588, -0.13512044)
+light_energy = 16.0
+spot_range = 13.864281
+spot_angle = 25.988354

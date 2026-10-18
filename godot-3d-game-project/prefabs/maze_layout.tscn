@@ -1,0 +1,530 @@
+[gd_scene format=3 uid="uid://dis66qon1xhw"]
+
+[ext_resource type="PackedScene" uid="uid://ctq2t51u5sy02" path="res://prefabs/maze_bush.tscn" id="1_05bcq"]
+
+[node name="Maze Layout" type="Node3D" unique_id=1772988826]
+
+[node name="Maze bush" parent="." unique_id=1167358594 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.611647, 0, 0, 0, 2.0024385, 0, 0, 0, 1, 0, 0.8134055, 0)
+
+[node name="Maze bush6" parent="." unique_id=478816472 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.611647, 0, 0, 0, 2.0024385, 0, 0, 0, 1, -2.6811352, 0.8134055, -4.000227)
+
+[node name="Maze bush10" parent="." unique_id=898080528 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.611647, 0, 0, 0, 2.0024385, 0, 0, 0, 1, -11.59071, 0.8134055, -4.000227)
+
+[node name="Maze bush11" parent="." unique_id=1870456282 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.04749354, 0, 0.99983466, 0, 2.0024385, 0, -2.611215, 0, 0.018185284, -12.983848, 0.8134055, -4.8030415)
+
+[node name="Maze bush7" parent="." unique_id=419441124 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.1415871e-07, 0, 1, 0, 2.0024385, 0, -2.611647, 0, -4.371139e-08, 7.270735, 0.8134055, -0.78301)
+
+[node name="Maze bush8" parent="." unique_id=584795232 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.611647, 0, 0, 0, 2.0024385, 0, 0, 0, 1, 0.92875814, 0.8134055, -8.030352)
+
+[node name="Maze bush2" parent="." unique_id=1895346001 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.611647, 0, 0, 0, 2.0024385, 0, 0, 0, 1, -10.774436, 0.8134055, 0)
+
+[node name="Maze bush14" parent="." unique_id=2035588010 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.5063906, 0, 0, 0, 2.0024385, 0, 0, 0, 1, -10.178621, 0.81340647, -6.865102)
+
+[node name="Maze bush15" parent="." unique_id=254857393 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-5.4588416e-08, 0, 1, 0, 2.0024385, 0, -1.2488374, 0, -4.371139e-08, -6.7436466, 0.81340647, -6.936741)
+
+[node name="Maze bush3" parent="." unique_id=1275053061 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.1415871e-07, 0, 1, 0, 2.0024385, 0, -2.611647, 0, -4.371139e-08, -4.431888, 0.813, 7.2144313)
+
+[node name="Maze bush5" parent="." unique_id=1454062454 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.1415871e-07, 0, 1, 0, 2.0024385, 0, -2.611647, 0, -4.371139e-08, -4.431888, 0.813, -4.827557)
+
+[node name="Maze bush13" parent="." unique_id=1089309715 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.1415871e-07, 0, 1, 0, 2.0024385, 0, -2.611647, 0, -4.371139e-08, -10.4153385, 0.813, -7.8227177)
+
+[node name="Maze bush12" parent="." unique_id=866437564 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.611645, 0, 0.0012042838, 0, 2.0024385, 0, -0.0031451639, 0, -0.9999993, -3.7495651, 0.813, -12.102865)
+
+[node name="Maze bush4" parent="." unique_id=1165448461 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.1415871e-07, 0, 1, 0, 2.0024385, 0, -2.611647, 0, -4.371139e-08, -0.84123087, 0.813, 7.2144313)
+
+[node name="Maze bush17" parent="." unique_id=853314066 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6113713, 0, 0.014538048, 0, 2.0024385, 0, -0.03796825, 0, 0.9998944, 9.13478, 0.8134055, 19.777525)
+
+[node name="Maze bush18" parent="." unique_id=823260477 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6113713, 0, 0.014538048, 0, 2.0024385, 0, -0.03796825, 0, 0.9998944, 6.7825108, 0.8134055, 15.816698)
+
+[node name="Maze bush19" parent="." unique_id=619393020 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6113713, 0, 0.014538048, 0, 2.0024385, 0, -0.03796825, 0, 0.9998944, -3.3683805, 0.8134055, 15.946228)
+
+[node name="Maze bush20" parent="." unique_id=1208784437 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.009526551, 0, 0.9999933, 0, 2.002438, 0, -2.6116295, 0, 0.0036477149, -3.9175186, 0.8134055, 15.163752)
+
+[node name="Maze bush21" parent="." unique_id=594812899 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.037968345, 0, 0.99989426, 0, 2.002438, 0, -2.6113708, 0, -0.014538085, 16.39336, 0.8134055, 18.888895)
+
+[node name="Maze bush22" parent="." unique_id=1446918838 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6113713, 0, 0.014538048, 0, 2.0024385, 0, -0.03796825, 0, 0.9998944, 9.946696, 0.8134055, 11.734518)
+
+[node name="Maze bush23" parent="." unique_id=344943183 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07592857, 0, -0.99957734, 0, 2.002438, 0, 2.6105425, 0, 0.029073058, 8.3314905, 0.8134055, 9.423647)
+
+[node name="Maze bush24" parent="." unique_id=894082264 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6113713, 0, 0.014538048, 0, 2.0024385, 0, -0.03796825, 0, 0.9998944, 2.1138253, 0.8134055, 19.934166)
+
+[node name="Maze bush25" parent="." unique_id=1988561522 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.5062312, 0, 0.014538044, 0, 2.0024385, 0, -0.021899987, 0, 0.99989426, -1.0334563, 0.81340647, 12.536798)
+
+[node name="Maze bush26" parent="." unique_id=247722972 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.01815571, 0, 0.9998941, 0, 2.002438, 0, -1.2487053, 0, -0.014538096, 2.2909997, 0.81340647, 12.939554)
+
+[node name="Maze bush29" parent="." unique_id=1404953998 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.03796836, 0, 0.77725464, 0, 2.0024385, 0, -2.6113708, 0, -0.011300996, 5.422746, 0.813, 12.211376)
+
+[node name="Maze bush30" parent="." unique_id=1325321363 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.037968345, 0, 0.99989426, 0, 2.002438, 0, -2.6113708, 0, -0.014538085, -1.1227374, 0.813, 12.107053)
+
+[node name="Maze bush31" parent="." unique_id=161717519 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.611415, 0, -0.013333766, 0, 2.0024385, 0, 0.034823056, 0, -0.9999109, 5.2096605, 0.813, 6.5823393)
+
+[node name="Maze bush33" parent="." unique_id=1886493173 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.610441, -0.012443356, -0.02975154, 0.017312005, 2.0022025, 0.013859215, 0.0774664, -0.028134322, 0.99946135, 20.460686, 0.73140305, -7.8318386)
+
+[node name="Maze bush34" parent="." unique_id=676366535 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.610441, -0.012443356, -0.02975154, 0.017312005, 2.0022025, 0.013859215, 0.0774664, -0.028134322, 0.99946135, 17.321535, 0.6581904, -12.58237)
+
+[node name="Maze bush35" parent="." unique_id=1716278380 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.610441, -0.012443356, -0.02975154, 0.017312005, 2.0022025, 0.013859215, 0.0774664, -0.028134322, 0.99946135, 8.416077, 0.5991309, -12.173714)
+
+[node name="Maze bush36" parent="." unique_id=1987704515 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.12515926, -0.012443354, 0.9988315, -0.03587456, 2.0022023, 0.0068797073, -2.6083996, -0.028134322, 0.047832478, 7.0474663, 0.57876974, -13.017418)
+
+[node name="Maze bush37" parent="." unique_id=1837538872 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07770038, -0.012443354, 0.999538, -0.03619537, 2.0022023, 0.006628769, -2.6102402, -0.028134324, 0.02966185, 27.516356, 0.76874715, -8.398763)
+
+[node name="Maze bush38" parent="." unique_id=1959714680 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.610441, -0.012443356, -0.02975154, 0.017312005, 2.0022025, 0.013859215, 0.0774664, -0.028134322, 0.99946135, 21.049664, 0.6262652, -15.830315)
+
+[node name="Maze bush39" parent="." unique_id=1232742120 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.039741546, -0.012443356, -0.9998647, 0.036443222, 2.002202, -0.0064265816, 2.6110902, -0.02813432, -0.015128493, 18.406406, 0.5834333, -19.587118)
+
+[node name="Maze bush40" parent="." unique_id=1975299999 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.610441, -0.012443356, -0.02975154, 0.017312005, 2.0022025, 0.013859215, 0.0774664, -0.028134322, 0.99946135, 9.112959, 0.6599818, -8.151429)
+
+[node name="Maze bush42" parent="." unique_id=1288470048 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.037154786, -0.012443354, 0.99953794, -0.017307902, 2.002202, 0.006628768, -1.2481645, -0.02813432, 0.029661842, 11.741658, 0.59056413, -16.678913)
+
+[node name="Maze bush43" parent="." unique_id=1890398134 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07770038, -0.012443354, 0.999538, -0.03619537, 2.0022023, 0.006628769, -2.6102402, -0.028134324, 0.02966185, 15.23794, 0.801606, -0.75274575)
+
+[node name="Maze bush44" parent="." unique_id=754417030 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07770038, -0.012443354, 0.999538, -0.03619537, 2.0022023, 0.006628769, -2.6102402, -0.028134324, 0.02966185, 15.596207, 0.63471353, -12.788246)
+
+[node name="Maze bush46" parent="." unique_id=780308706 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07770038, -0.012443354, 0.999538, -0.03619537, 2.0022023, 0.006628769, -2.6102402, -0.028134324, 0.02966185, 9.704632, 0.55354, -21.596128)
+
+[node name="Maze bush47" parent="." unique_id=1454142970 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610345, -0.012443356, 0.030955233, -0.01735558, 2.0022023, -0.01385122, -0.08060984, -0.028134326, -0.9994249, 16.494667, 0.5384064, -20.039398)
+
+[node name="Maze bush48" parent="." unique_id=371121119 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.07770038, -0.012443354, 0.999538, -0.03619537, 2.0022023, 0.006628769, -2.6102402, -0.028134324, 0.02966185, 18.826939, 0.8254076, -1.67876)
+
+[node name="Maze bush49" parent="." unique_id=840563585 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6112945, -0.0124433525, -0.015217043, 0.016783966, 2.002202, 0.01395412, 0.03951046, -0.028134324, 0.9997868, 28.424566, 1.0660563, 12.205984)
+
+[node name="Maze bush50" parent="." unique_id=792491115 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6112945, -0.0124433525, -0.015217043, 0.016783966, 2.002202, 0.01395412, 0.03951046, -0.028134324, 0.9997868, 24.818682, 0.9930061, 8.16605)
+
+[node name="Maze bush51" parent="." unique_id=207943636 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6112945, -0.0124433525, -0.015217043, 0.016783966, 2.002202, 0.01395412, 0.03951046, -0.028134324, 0.9997868, 16.896294, 0.93574804, 8.0312605)
+
+[node name="Maze bush52" parent="." unique_id=1906349664 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.0072498694, -0.013299151, 0.99997413, -0.03613199, 2.002202, 0.0066792797, -2.6113868, -0.027740035, 0.0026837569, 15.260712, 0.9155924, 7.207543)
+
+[node name="Maze bush53" parent="." unique_id=1153775826 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.039741486, -0.012443354, 0.9998649, -0.036443222, 2.0022018, 0.0064265826, -2.6110902, -0.028134316, 0.015128508, 35.70623, 1.101856, 11.533135)
+
+[node name="Maze bush54" parent="." unique_id=1637283434 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6112945, -0.0124433525, -0.015217043, 0.016783966, 2.002202, 0.01395412, 0.03951046, -0.028134324, 0.9997868, 29.4754, 0.95996857, 4.191394)
+
+[node name="Maze bush55" parent="." unique_id=692819001 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.0017741174, -0.012443352, -0.9999805, 0.036683373, 2.0022013, -0.006223038, 2.6113884, -0.02813431, -0.000591971, 28.762184, 0.9172349, -2.1158013)
+
+[node name="Maze bush56" parent="." unique_id=124060743 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6112945, -0.0124433525, -0.015217043, 0.016783966, 2.002202, 0.01395412, 0.03951046, -0.028134324, 0.9997868, 17.651588, 0.99681354, 12.042987)
+
+[node name="Maze bush58" parent="." unique_id=1150282865 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.018076425, 0.091173954, 0.9988577, -0.018386383, 2.0001638, -0.04531837, -1.2485712, -0.02813432, 0.015128479, 19.314817, 0.9259226, 7.8099384)
+
+[node name="Maze bush61" parent="." unique_id=1037004341 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.018076425, 0.091173954, 0.9988577, -0.018386383, 2.0001638, -0.04531837, -1.2485712, -0.02813432, 0.015128479, 19.314817, 0.9259226, 7.8099384)
+
+[node name="Maze bush59" parent="." unique_id=445533577 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.039741486, -0.012443354, 0.9998649, -0.036443222, 2.0022018, 0.0064265826, -2.6110902, -0.028134316, 0.015128508, 23.8835, 1.13784, 19.351837)
+
+[node name="Maze bush60" parent="." unique_id=945541403 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.039741486, -0.012443354, 0.9998649, -0.036443222, 2.0022018, 0.0064265826, -2.6110902, -0.028134316, 0.015128508, 23.681526, 0.9698047, 6.707152)
+
+[node name="Maze bush63" parent="." unique_id=1456844746 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6112444, -0.012443355, 0.016421288, -0.016827846, 2.0022027, -0.013946367, -0.042655185, -0.02813432, -0.9997677, 29.890936, 0.8567573, -0.16294837)
+
+[node name="Maze bush64" parent="." unique_id=173190643 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.039741486, -0.012443354, 0.9998649, -0.036443222, 2.0022018, 0.0064265826, -2.6110902, -0.028134316, 0.015128508, 27.47367, 1.1609157, 19.406162)
+
+[node name="Maze bush65" parent="." unique_id=87495059 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114852, 0, -0.0111349905, 0, 2.0024385, 0, 0.029080663, 0, 0.999938, -34.99964, 0.8134055, 15.427433)
+
+[node name="Maze bush66" parent="." unique_id=855457012 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114852, 0, -0.0111349905, 0, 2.0024385, 0, 0.029080663, 0, 0.999938, -37.63607, 0.8134055, 11.3976)
+
+[node name="Maze bush67" parent="." unique_id=919309711 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114852, 0, -0.0111349905, 0, 2.0024385, 0, 0.029080663, 0, 0.999938, -46.545097, 0.8134055, 11.298393)
+
+[node name="Maze bush68" parent="." unique_id=593269788 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.14981523, 0, 0.971523, 0, 2.0024385, 0, -5.1079345, 0, 0.028494684, -47.929207, 0.8134055, 8.353405)
+
+[node name="Maze bush69" parent="." unique_id=1534265316 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.029080544, 0, 0.999938, 0, 2.0024385, 0, -2.6114852, 0, 0.011134947, -27.720644, 0.8134055, 14.725431)
+
+[node name="Maze bush70" parent="." unique_id=1127034639 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114852, 0, -0.0111349905, 0, 2.0024385, 0, 0.029080663, 0, 0.999938, -32.691, 0.8134055, 7.407921)
+
+[node name="Maze bush71" parent="." unique_id=1995099772 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.008888337, 0, -0.99999416, 0, 2.0024388, 0, 2.6116319, 0, 0.0034033637, -33.573814, 0.8134055, 5.056343)
+
+[node name="Maze bush72" parent="." unique_id=211040775 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114852, 0, -0.0111349905, 0, 2.0024385, 0, 0.029080663, 0, 0.999938, -45.773415, 0.8134055, 15.307461)
+
+[node name="Maze bush75" parent="." unique_id=1376774724 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.029080544, 0, 0.999938, 0, 2.0024385, 0, -2.6114852, 0, 0.011134947, -39.51159, 0.813, 22.592068)
+
+[node name="Maze bush76" parent="." unique_id=1539089793 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.029080544, 0, 0.999938, 0, 2.0024385, 0, -2.6114852, 0, 0.011134947, -39.377502, 0.813, 10.550827)
+
+[node name="Maze bush77" parent="." unique_id=1217520303 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.029080542, 0, 0.7772887, 0, 2.0024385, 0, -2.6114848, 0, 0.008655606, -36.338345, 0.813, 7.544302)
+
+[node name="Maze bush78" parent="." unique_id=398024577 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.011819963, -0.01060625, 0.9969393, 0.0020328246, 2.0034811, 0.005287767, -1.5661564, 0.002680522, -0.0075171506, -43.736473, 0.813, 6.7873163)
+
+[node name="Maze bush141" parent="." unique_id=726568430 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.36751226, 0, 0.9507318, 0, 1.3566002, 0, -1.7172157, 0, -0.20347217, -47.379803, 1.9099457, 14.964159)
+
+[node name="Maze bush169" parent="." unique_id=1964940470 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.36751226, 0, 0.9507318, 0, 2.0024383, 0, -1.7172157, 0, -0.20347217, -38.2371, 0.813, 35.077)
+
+[node name="Maze bush170" parent="." unique_id=279445850 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.755509, 0, -0.025264293, 0, 2.0024383, 0, 0.04563248, 0, -0.9719329, -26.900818, 0.813, 43.378716)
+
+[node name="Maze bush172" parent="." unique_id=1515494008 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.755509, 0, -0.025264293, 0, 1.529033, 0, 0.04563248, 0, -0.9719329, -7.131897, 1.9199646, 35.987034)
+
+[node name="Maze bush79" parent="." unique_id=456125091 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114483, 0, 0.012339192, 0, 2.0024385, 0, -0.032225613, 0, -0.99992394, -37.887066, 0.813, 3.2835674)
+
+[node name="Maze bush80" parent="." unique_id=513251328 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.029080544, 0, 0.999938, 0, 2.0024385, 0, -2.6114852, 0, 0.011134947, -35.921158, 0.813, 22.63205)
+
+[node name="Maze bush81" parent="." unique_id=135340907 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116323, 0, 0.003403332, 0, 2.0024385, 0, -0.008888307, 0, 0.9999942, -26.085657, 0.8134055, 35.305447)
+
+[node name="Maze bush82" parent="." unique_id=1567684843 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116323, 0, 0.003403332, 0, 2.0024385, 0, -0.008888307, 0, 0.9999942, -28.78039, 0.8134055, 31.31437)
+
+[node name="Maze bush83" parent="." unique_id=599248451 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116323, 0, 0.003403332, 0, 2.0024385, 0, -0.008888307, 0, 0.9999942, -37.68991, 0.8134055, 31.344692)
+
+[node name="Maze bush84" parent="." unique_id=1782670264 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.038606424, 0, 0.9998907, 0, 2.002438, 0, -2.6113613, 0, 0.014782403, -39.66881, 0.8134055, 30.546627)
+
+[node name="Maze bush85" parent="." unique_id=1426753400 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.008888408, 0, 0.9999943, 0, 2.0024385, 0, -2.6116319, 0, -0.0034033721, -18.81763, 0.8134055, 34.4977)
+
+[node name="Maze bush86" parent="." unique_id=2017015619 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116323, 0, 0.003403332, 0, 2.0024385, 0, -0.008888307, 0, 0.9999942, -24.795988, 0.8134055, 27.271984)
+
+[node name="Maze bush87" parent="." unique_id=461653190 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.046855506, 0, -0.9998391, 0, 2.0024378, 0, 2.611226, 0, 0.017940968, -25.248419, 0.8134055, 24.943272)
+
+[node name="Maze bush88" parent="." unique_id=1923058476 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116323, 0, 0.003403332, 0, 2.0024385, 0, -0.008888307, 0, 0.9999942, -36.860023, 0.8134055, 35.342113)
+
+[node name="Maze bush89" parent="." unique_id=1961983411 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.2109736, 0, 0.0034010587, 0, 2.0024385, 0, -0.004121382, 0, 0.9993267, -36.287575, 0.81340647, 28.475029)
+
+[node name="Maze bush90" parent="." unique_id=1986366737 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.004250263, 0, 0.9999939, 0, 2.0024385, 0, -1.2488301, 0, -0.0034033833, -33.713608, 0.81340647, 28.391697)
+
+[node name="Maze bush91" parent="." unique_id=1823436913 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.008888408, 0, 0.9999943, 0, 2.0024385, 0, -2.6116319, 0, -0.0034033721, -30.49296, 0.813, 42.534916)
+
+[node name="Maze bush92" parent="." unique_id=315072235 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.008888408, 0, 0.9999943, 0, 2.0024385, 0, -2.6116319, 0, -0.0034033721, -30.533945, 0.813, 30.493)
+
+[node name="Maze bush93" parent="." unique_id=160212937 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.013577826, -0.0013329107, 0.77732617, 0.0011554863, 2.0024378, 0.0005156488, -2.6116114, 0.00087903446, 0.00404156, -27.879276, 0.813, 27.091053)
+
+[node name="Maze bush94" parent="." unique_id=1648481534 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.008888408, 0, 0.9999943, 0, 2.0024385, 0, -2.6116319, 0, -0.0034033721, -35.940193, 0.813, 27.518223)
+
+[node name="Maze bush95" parent="." unique_id=1158674539 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.611641, 0, -0.002198943, 0, 2.0024383, 0, 0.005742819, 0, -0.9999973, -29.049126, 0.813, 20.839344)
+
+[node name="Maze bush96" parent="." unique_id=1430768748 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.008888408, 0, 0.9999943, 0, 2.0024385, 0, -2.6116319, 0, -0.0034033721, -26.902323, 0.813, 42.5227)
+
+[node name="Maze bush97" parent="." unique_id=1969492409 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6094165, -0.012129311, -0.040878687, 0.017312, 2.002202, 0.013859214, 0.10652881, -0.028271133, 0.9990679, -15.031254, 0.73140305, 7.8174706)
+
+[node name="Maze bush98" parent="." unique_id=241475632 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6094165, -0.012129311, -0.040878687, 0.017312, 2.002202, 0.013859214, 0.10652881, -0.028271133, 0.9990679, -17.546574, 0.6581904, 3.711608)
+
+[node name="Maze bush99" parent="." unique_id=1903769864 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6094165, -0.012129311, -0.040878687, 0.017312, 2.002202, 0.013859214, 0.10652881, -0.028271133, 0.9990679, -26.448542, 0.5991309, 3.3481865)
+
+[node name="Maze bush100" parent="." unique_id=1391572307 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.154196, -0.0121293, 0.9982368, -0.03587455, 2.0022018, 0.006879705, -2.6068437, -0.028271131, 0.05895148, -27.807665, 0.57876974, 2.489297)
+
+[node name="Maze bush101" parent="." unique_id=2106595624 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676058, -0.012129312, 0.99914587, -0.036195368, 2.0022023, 0.0066287685, -2.6092138, -0.028271137, 0.040789858, -7.7347183, 0.76874715, 7.331764)
+
+[node name="Maze bush102" parent="." unique_id=1718097233 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6094165, -0.012129311, -0.040878687, 0.017312, 2.002202, 0.013859214, 0.10652881, -0.028271133, 0.9990679, -13.775017, 0.6262652, -0.16751194)
+
+[node name="Maze bush103" parent="." unique_id=1572557417 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.06881354, -0.012129313, -0.99963415, 0.03644322, 2.0022018, -0.0064265826, 2.6104858, -0.028271131, -0.026261033, -15.259691, 0.5834333, -2.5639563)
+
+[node name="Maze bush104" parent="." unique_id=785926989 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6094165, -0.012129311, -0.040878687, 0.017312, 2.002202, 0.013859214, 0.10652881, -0.028271133, 0.9990679, -25.796488, 0.6599818, 7.377983)
+
+[node name="Maze bush105" parent="." unique_id=462264800 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.5051037, -0.012129312, -0.040878665, 0.009985515, 2.0022023, 0.013859215, 0.06144553, -0.02827114, 0.9990681, -24.920544, 0.56878734, 0.54358006)
+
+[node name="Maze bush106" parent="." unique_id=980491568 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.05105079, -0.012129308, 0.9991458, -0.017307904, 2.0022023, 0.0066287685, -1.2476734, -0.02827113, 0.04078985, -21.485573, 0.59056413, 0.6121206)
+
+[node name="Maze bush107" parent="." unique_id=97967986 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676058, -0.012129312, 0.99914587, -0.036195368, 2.0022023, 0.0066287685, -2.6092138, -0.028271137, 0.040789858, -19.75427, 0.801606, 14.84441)
+
+[node name="Maze bush108" parent="." unique_id=1739795834 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676058, -0.012129312, 0.99914587, -0.036195368, 2.0022023, 0.0066287685, -2.6092138, -0.028271137, 0.040789858, -19.262009, 0.63471353, 2.8136444)
+
+[node name="Maze bush109" parent="." unique_id=867943003 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676053, -0.012129302, 0.7766728, -0.036195368, 2.0022018, 0.005152785, -2.609213, -0.028271133, 0.031707462, -17.307621, 0.61936265, 0.88797283)
+
+[node name="Maze bush110" parent="." unique_id=718819720 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676058, -0.012129312, 0.99914587, -0.036195368, 2.0022023, 0.0066287685, -2.6092138, -0.028271137, 0.040789858, -25.117908, 0.55354, -0.42279148)
+
+[node name="Maze bush111" parent="." unique_id=251175425 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6092858, -0.01212931, 0.04208191, -0.017355576, 2.0022023, -0.013851221, -0.10967099, -0.02827114, -0.99901825, -18.282864, 0.5384064, -4.4270544)
+
+[node name="Maze bush112" parent="." unique_id=605461666 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.10676058, -0.012129312, 0.99914587, -0.036195368, 2.0022023, 0.0066287685, -2.6092138, -0.028271137, 0.040789858, -16.16668, 0.8254076, 14.990871)
+
+[node name="Maze bush113" parent="." unique_id=2128800245 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6106923, -0.012129307, -0.026348718, 0.016783964, 2.0022018, 0.013954118, 0.068584755, -0.02827114, 0.99955547, -6.712755, 1.0660563, 27.94917)
+
+[node name="Maze bush114" parent="." unique_id=189960209 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6106923, -0.012129307, -0.026348718, 0.016783964, 2.0022018, 0.013954118, 0.068584755, -0.02827114, 0.99955547, -9.287508, 0.9930061, 23.880314)
+
+[node name="Maze bush115" parent="." unique_id=572052335 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6106923, -0.012129307, -0.026348718, 0.016783964, 2.0022018, 0.013954118, 0.068584755, -0.02827114, 0.99955547, -18.193827, 0.93574804, 23.646336)
+
+[node name="Maze bush116" parent="." unique_id=1175881036 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.03632719, -0.012989439, 0.9998824, -0.036132, 2.0022023, 0.0066792797, -2.6111443, -0.027886407, 0.013818293, -19.820137, 0.9155924, 22.804455)
+
+[node name="Maze bush117" parent="." unique_id=328271098 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.06881348, -0.0121293105, 0.9996343, -0.03644322, 2.0022016, 0.0064265816, -2.6104856, -0.02827113, 0.02626105, 0.5759506, 1.101856, 27.35744)
+
+[node name="Maze bush118" parent="." unique_id=925656519 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6106923, -0.012129307, -0.026348718, 0.016783964, 2.0022018, 0.013954118, 0.068584755, -0.02827114, 0.99955547, -5.5727463, 0.95996857, 19.946777)
+
+[node name="Maze bush119" parent="." unique_id=264030222 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.030851789, -0.0121293, -0.9999119, 0.03668337, 2.0022013, -0.0062230364, 2.6112065, -0.02827112, -0.011726706, -7.04813, 0.9172349, 13.622761)
+
+[node name="Maze bush120" parent="." unique_id=1970230541 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6106923, -0.012129307, -0.026348718, 0.016783964, 2.0022018, 0.013954118, 0.068584755, -0.02827114, 0.99955547, -17.48325, 0.99681354, 27.666225)
+
+[node name="Maze bush121" parent="." unique_id=735484423 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.5058398, -0.012129304, -0.026348716, 0.009680944, 2.002202, 0.013954114, 0.03955946, -0.028271137, 0.9995553, -16.706768, 0.90484715, 20.81982)
+
+[node name="Maze bush122" parent="." unique_id=1133568565 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032905232, -0.012129315, 0.9996341, -0.017426418, 2.0022018, 0.0064265803, -1.2482822, -0.028271133, 0.026261022, -13.271162, 0.9259226, 20.838413)
+
+[node name="Maze bush123" parent="." unique_id=847098757 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.06881348, -0.0121293105, 0.9996343, -0.03644322, 2.0022016, 0.0064265816, -2.6104856, -0.02827113, 0.02626105, -11.333111, 1.13784, 35.044018)
+
+[node name="Maze bush124" parent="." unique_id=716136248 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.06881348, -0.0121293105, 0.9996343, -0.03644322, 2.0022016, 0.0064265816, -2.6104856, -0.02827113, 0.02626105, -11.015821, 0.9698047, 23.53306)
+
+[node name="Maze bush126" parent="." unique_id=1777741133 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.06881348, -0.0121293105, 0.9996343, -0.03644322, 2.0022016, 0.0064265816, -2.6104856, -0.02827113, 0.02626105, -16.918165, 0.88955677, 19.856419)
+
+[node name="Maze bush127" parent="." unique_id=421470189 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6106079, -0.012129307, 0.02755268, -0.016827848, 2.002203, -0.013946368, -0.071728736, -0.028271135, -0.99952316, -10.6937895, 0.8567573, 14.132442)
+
+[node name="Maze bush128" parent="." unique_id=463360620 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.06881348, -0.0121293105, 0.9996343, -0.03644322, 2.0022016, 0.0064265816, -2.6104856, -0.02827113, 0.02626105, -7.7437706, 1.1609157, 35.138317)
+
+[node name="Maze bush129" parent="." unique_id=734025601 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.070369884, 0, 0.99963677, 0, 2.0024385, 0, -2.610699, 0, 0.026944641, -32.856728, 0.8134055, -14.506402)
+
+[node name="Maze bush130" parent="." unique_id=336695014 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.070369884, 0, 0.99963677, 0, 2.0024385, 0, -2.610699, 0, 0.026944641, -36.927746, 0.8134055, -11.93402)
+
+[node name="Maze bush131" parent="." unique_id=1013924561 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.070369884, 0, 0.99963677, 0, 2.0024385, 0, -2.610699, 0, 0.026944641, -37.16781, 0.8134055, -3.0276737)
+
+[node name="Maze bush132" parent="." unique_id=457052319 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.611631, 0, -0.003525585, 0, 2.0024385, 0, 0.009207584, 0, -0.99999356, -38.00787, 0.8134055, -1.2349076)
+
+[node name="Maze bush133" parent="." unique_id=1092523928 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610699, 0, 0.026944596, 0, 2.0024385, 0, -0.070369765, 0, -0.99963677, -33.443546, 0.8134055, -21.79559)
+
+[node name="Maze bush134" parent="." unique_id=1962878049 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.070369884, 0, 0.99963677, 0, 2.0024385, 0, -2.610699, 0, 0.026944641, -40.859142, 0.8134055, -15.651193)
+
+[node name="Maze bush135" parent="." unique_id=1850713844 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6114461, 0, -0.01240899, 0, 2.0024385, 0, 0.03240796, 0, 0.99992305, -43.23502, 0.8134055, -14.133226)
+
+[node name="Maze bush136" parent="." unique_id=1131311280 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.070369884, 0, 0.99963677, 0, 2.0024385, 0, -2.610699, 0, 0.026944641, -33.14704, 0.8134055, -3.7358704)
+
+[node name="Maze bush139" parent="." unique_id=1290695130 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610699, 0, 0.026944596, 0, 2.0024385, 0, -0.070369765, 0, -0.99963677, -25.764332, 0.813, -9.881729)
+
+[node name="Maze bush140" parent="." unique_id=1495031519 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610699, 0, 0.026944596, 0, 2.0024385, 0, -0.070369765, 0, -0.99963677, -37.80195, 0.813, -10.206197)
+
+[node name="Maze bush142" parent="." unique_id=576848565 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610699, 0, 0.026944596, 0, 2.0024385, 0, -0.070369765, 0, -0.99963677, -40.95724, 0.813, -5.201598)
+
+[node name="Maze bush143" parent="." unique_id=235395605 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.07351384, 0, -0.99960387, 0, 2.0024385, 0, 2.6106122, 0, -0.028148461, -45.05623, 0.813, -11.659912)
+
+[node name="Maze bush144" parent="." unique_id=1062986738 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.610699, 0, 0.026944596, 0, 2.0024385, 0, -0.070369765, 0, -0.99963677, -25.667583, 0.813, -13.47108)
+
+[node name="Maze bush145" parent="." unique_id=12069413 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032408, 0, 0.999923, 0, 2.0024388, 0, -2.6114469, 0, 0.012409035, -12.840252, 0.8134055, -23.104961)
+
+[node name="Maze bush146" parent="." unique_id=17166368 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032408, 0, 0.999923, 0, 2.0024388, 0, -2.6114469, 0, 0.012409035, -16.87344, 0.8134055, -20.473671)
+
+[node name="Maze bush147" parent="." unique_id=1783926568 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032408, 0, 0.999923, 0, 2.0024388, 0, -2.6114469, 0, 0.012409035, -16.983997, 0.8134055, -11.564785)
+
+[node name="Maze bush148" parent="." unique_id=2017864462 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6104243, 0, 0.03059085, 0, 2.0024383, 0, -0.079892516, 0, -0.9995321, -17.804035, 0.8134055, -10.18172)
+
+[node name="Maze bush149" parent="." unique_id=923486545 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.012408983, 0, 2.0024385, 0, -0.032407917, 0, -0.99992317, -13.532974, 0.8134055, -30.384851)
+
+[node name="Maze bush150" parent="." unique_id=1626244511 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032408, 0, 0.999923, 0, 2.0024388, 0, -2.6114469, 0, 0.012409035, -20.858456, 0.8134055, -24.1333)
+
+[node name="Maze bush151" parent="." unique_id=819695477 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.6116407, 0, 0.002129238, 0, 2.002438, 0, -0.005560875, 0, 0.9999979, -23.21201, 0.8134055, -23.224585)
+
+[node name="Maze bush152" parent="." unique_id=1131481259 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.032408, 0, 0.999923, 0, 2.0024388, 0, -2.6114469, 0, 0.012409035, -12.973951, 0.8134055, -12.33136)
+
+[node name="Maze bush153" parent="." unique_id=1484049461 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.01869281, 0, 0.9999228, 0, 2.0024383, 0, -1.5062743, 0, 0.012409028, -19.831127, 0.81340647, -13.01232)
+
+[node name="Maze bush154" parent="." unique_id=1696718985 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.2487411, 0, 0.012408964, 0, 2.0024385, 0, -0.015496805, 0, -0.9999228, -19.860142, 0.81340647, -16.35114)
+
+[node name="Maze bush155" parent="." unique_id=1447058409 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.012408983, 0, 2.0024385, 0, -0.032407917, 0, -0.99992317, -5.6813736, 0.813, -18.583897)
+
+[node name="Maze bush156" parent="." unique_id=454557152 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.012408983, 0, 2.0024385, 0, -0.032407917, 0, -0.99992317, -17.722433, 0.813, -18.853245)
+
+[node name="Maze bush157" parent="." unique_id=255147207 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.009645961, 0, 2.0024385, 0, -0.032407857, 0, -0.7772769, -19.703001, 0.813, -21.030312)
+
+[node name="Maze bush158" parent="." unique_id=231863636 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.012408983, 0, 2.0024385, 0, -0.032407917, 0, -0.99992317, -20.79161, 0.813, -12.787496)
+
+[node name="Maze bush159" parent="." unique_id=543010853 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.035553217, 0, -0.999907, 0, 2.0024385, 0, 2.6114056, 0, -0.013613325, -26.13641, 0.813, -19.536808)
+
+[node name="Maze bush160" parent="." unique_id=1943862768 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6114461, 0, 0.012408983, 0, 2.0024385, 0, -0.032407917, 0, -0.99992317, -5.636812, 0.813, -22.174278)
+
+[node name="Maze bush164" parent="." unique_id=207742318 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-4.9607306, 0, 0.012270448, 0, 2.0024385, 0, -0.06156242, 0, -0.9887599, 6.852543, 0.813, -22.174278)
+
+[node name="Maze bush161" parent="." unique_id=96835449 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.14777568, -0.028459389, 0.99829674, 0.017312, 2.0022023, 0.013859214, -2.6074064, 0.011680771, 0.056670874, -40.149998, 0.73140305, -34.59262)
+
+[node name="Maze bush162" parent="." unique_id=33590302 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.14777568, -0.028459389, 0.99829674, 0.017312, 2.0022023, 0.013859214, -2.6074064, 0.011680771, 0.056670874, -44.295116, 0.6581904, -32.142536)
+
+[node name="Maze bush163" parent="." unique_id=1734571089 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.17448372, -0.027934417, 0.9372844, 0.04094372, 1.9892219, 0.012996493, -6.174075, 0.012402192, 0.02657454, -44.799255, 0.5991309, -16.015364)
+
+[node name="Maze bush165" parent="." unique_id=237199271 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6071997, -0.028459392, 0.056583278, -0.036195368, 2.0022023, 0.0066287685, -0.14800419, 0.011680776, -0.998376, -40.52027, 0.76874715, -41.895927)
+
+[node name="Maze bush166" parent="." unique_id=1571420095 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.14777568, -0.028459389, 0.99829674, 0.017312, 2.0022023, 0.013859214, -2.6074064, 0.011680771, 0.056670874, -48.114117, 0.6262652, -35.97496)
+
+[node name="Maze bush167" parent="." unique_id=1990371246 instance=ExtResource("1_05bcq")]
+transform = Transform3D(1.515841, -0.024892041, -0.04298151, 0.021173099, 1.7512285, -0.0065667634, 0.06395641, 0.010216604, 1.0208867, -47.76561, 1.124136, -34.528366)
+
+[node name="Maze bush168" parent="." unique_id=587072412 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.14777568, -0.028459389, 0.99829674, 0.017312, 2.0022023, 0.013859214, -2.6074064, 0.011680771, 0.056670874, -40.75965, 0.6599818, -23.835684)
+
+[node name="Maze bush171" parent="." unique_id=178809692 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6071997, -0.028459392, 0.056583278, -0.036195368, 2.0022023, 0.0066287685, -0.14800419, 0.011680776, -0.998376, -33.19862, 0.801606, -29.759087)
+
+[node name="Maze bush176" parent="." unique_id=119296919 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6071997, -0.028459392, 0.056583278, -0.036195368, 2.0022023, 0.0066287685, -0.14800419, 0.011680776, -0.998376, -32.995445, 0.8254076, -33.34391)
+
+[node name="Maze bush177" parent="." unique_id=41951249 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.109856516, -0.028459392, 0.99901384, 0.016783964, 2.0022016, 0.013954118, -2.609281, 0.011680762, 0.042150415, -19.889284, 1.0660563, -42.59176)
+
+[node name="Maze bush178" parent="." unique_id=1914223451 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.109856516, -0.028459392, 0.99901384, 0.016783964, 2.0022016, 0.013954118, -2.609281, 0.011680762, 0.042150415, -23.998344, 0.9930061, -39.380653)
+
+[node name="Maze bush179" parent="." unique_id=867864520 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.109856516, -0.028459392, 0.99901384, 0.016783964, 2.0022016, 0.013954118, -2.609281, 0.011680762, 0.042150415, -24.37312, 0.93574804, -31.180159)
+
+[node name="Maze bush180" parent="." unique_id=1332405207 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6102438, -0.028088316, 0.02962672, -0.036132, 2.0022023, 0.006679279, -0.07761015, 0.012546876, -0.999539, -25.240608, 0.9155924, -29.567364)
+
+[node name="Maze bush181" parent="." unique_id=963605703 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.028459378, 0.042064007, -0.036443215, 2.0022013, 0.006426582, -0.110081926, 0.011680766, -0.9990941, -20.365688, 1.101856, -49.88891)
+
+[node name="Maze bush182" parent="." unique_id=947526994 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.109856516, -0.028459392, 0.99901384, 0.016783964, 2.0022016, 0.013954118, -2.609281, 0.011680762, 0.042150415, -27.87265, 0.95996857, -44.751793)
+
+[node name="Maze bush183" parent="." unique_id=733162621 instance=ExtResource("1_05bcq")]
+transform = Transform3D(2.5066156, -0.023502713, 0.28049514, 0.036683362, 2.0022008, -0.0062230346, -0.7322769, 0.0198494, 0.95983535, -34.219204, 0.9172349, -42.19886)
+
+[node name="Maze bush184" parent="." unique_id=1969069539 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.109856516, -0.028459392, 0.99901384, 0.016783964, 2.0022016, 0.013954118, -2.609281, 0.011680762, 0.042150415, -20.342495, 0.99681354, -31.827084)
+
+[node name="Maze bush185" parent="." unique_id=1691739968 instance=ExtResource("1_05bcq")]
+transform = Transform3D(0.04823708, -0.02849906, 1.0090759, 0.0073697004, 2.0049927, 0.014094663, -1.1457139, 0.01169705, 0.042574964, -27.175766, 0.90484715, -32.927803)
+
+[node name="Maze bush186" parent="." unique_id=499262104 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-1.2476058, -0.028459383, 0.042063985, -0.017426414, 2.0022018, 0.0064265807, -0.052638996, 0.0116807725, -0.999094, -27.102852, 0.9259226, -35.736385)
+
+[node name="Maze bush187" parent="." unique_id=2132829944 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.028459378, 0.042064007, -0.036443215, 2.0022013, 0.006426582, -0.110081926, 0.011680766, -0.9990941, -12.8683815, 1.13784, -37.8598)
+
+[node name="Maze bush188" parent="." unique_id=2034225771 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.028459378, 0.042064007, -0.036443215, 2.0022013, 0.006426582, -0.110081926, 0.011680766, -0.9990941, -24.898493, 0.9698047, -38.247456)
+
+[node name="Maze bush189" parent="." unique_id=534560138 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.02845938, 0.0326979, -0.036443207, 2.0022016, 0.0049956175, -0.110081874, 0.011680765, -0.7766326, -28.696941, 0.95388484, -41.192207)
+
+[node name="Maze bush190" parent="." unique_id=94829978 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.028459378, 0.042064007, -0.036443215, 2.0022013, 0.006426582, -0.110081926, 0.011680766, -0.9990941, -28.142393, 0.88955677, -32.881268)
+
+[node name="Maze bush191" parent="." unique_id=256207631 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-0.11299873, -0.028459385, -0.99896246, -0.016827846, 2.0022025, -0.0139463665, 2.609147, 0.011680764, -0.04335371, -34.965847, 0.8567573, -39.87927)
+
+[node name="Maze bush192" parent="." unique_id=474642930 instance=ExtResource("1_05bcq")]
+transform = Transform3D(-2.6090708, -0.028459378, 0.042064007, -0.036443215, 2.0022013, 0.006426582, -0.110081926, 0.011680766, -0.9990941, -12.717337, 1.1609157, -41.447197)

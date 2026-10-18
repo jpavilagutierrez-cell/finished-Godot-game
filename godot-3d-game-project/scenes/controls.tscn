@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://co115262mbgee"]
+
+[ext_resource type="Script" uid="uid://b2b1755rwys2a" path="res://scripts/controls.gd" id="1_5tddo"]
+[ext_resource type="Texture2D" uid="uid://bakp5430rbht0" path="res://Assets/main menu picture/Screenshot 2026-08-18 100045.png" id="1_i2gav"]
+[ext_resource type="PackedScene" uid="uid://u0h4mu1kolvp" path="res://scenes/fade_transition.tscn" id="3_cywyo"]
+
+[node name="controls" type="Node2D" unique_id=1402540832]
+script = ExtResource("1_5tddo")
+
+[node name="Screenshot20260818100045" type="Sprite2D" parent="." unique_id=1110596776]
+position = Vector2(577.50006, 326)
+scale = Vector2(1.202294, 0.9819277)
+texture = ExtResource("1_i2gav")
+
+[node name="exit" type="Button" parent="." unique_id=638325980]
+offset_left = 35.0
+offset_top = 34.0
+offset_right = 72.0
+offset_bottom = 65.0
+scale = Vector2(1.7007486, 1.5835588)
+text = "exit"
+
+[node name="Fade_transition" parent="." unique_id=1703938721 instance=ExtResource("3_cywyo")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1615065216]
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ctq2t51u5sy02"]
+
+[ext_resource type="Texture2D" uid="uid://d18m4vr5ukykd" path="res://Grass006.png" id="1_iadoo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u8o23"]
+albedo_texture = ExtResource("1_iadoo")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c1cxb"]
+size = Vector3(3.097412, 2.1860352, 1)
+
+[node name="Maze bush" type="Node3D" unique_id=1167358594]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1872328238]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0588684, 0.5986023, 0)
+material_override = SubResource("StandardMaterial3D_u8o23")
+size = Vector3(3.1177368, 2.1972046, 1)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGBox3D" unique_id=1829199888]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D/StaticBody3D" unique_id=921366842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.007446289, -0.005126953, 0)
+shape = SubResource("BoxShape3D_c1cxb")

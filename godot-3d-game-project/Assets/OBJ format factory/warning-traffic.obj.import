@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://5bebvud1oos"
+path="res://.godot/imported/warning-traffic.obj-322acf178ed5b48199f9fd484de26bfd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/warning-traffic.obj-322acf178ed5b48199f9fd484de26bfd.mesh"]
+
+source_file="res://Assets/OBJ format factory/warning-traffic.obj"
+dest_files=["res://.godot/imported/warning-traffic.obj-322acf178ed5b48199f9fd484de26bfd.mesh", "res://.godot/imported/warning-traffic.obj-322acf178ed5b48199f9fd484de26bfd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

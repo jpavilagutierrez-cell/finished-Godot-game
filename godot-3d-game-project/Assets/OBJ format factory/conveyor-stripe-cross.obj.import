@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kp8gfktxp3d4"
+path="res://.godot/imported/conveyor-stripe-cross.obj-4727e67686e3b7c4d43d3aa32dabd692.mesh"
+
+[deps]
+
+files=["res://.godot/imported/conveyor-stripe-cross.obj-4727e67686e3b7c4d43d3aa32dabd692.mesh"]
+
+source_file="res://Assets/OBJ format factory/conveyor-stripe-cross.obj"
+dest_files=["res://.godot/imported/conveyor-stripe-cross.obj-4727e67686e3b7c4d43d3aa32dabd692.mesh", "res://.godot/imported/conveyor-stripe-cross.obj-4727e67686e3b7c4d43d3aa32dabd692.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

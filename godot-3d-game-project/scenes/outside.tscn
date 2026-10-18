@@ -1,0 +1,454 @@
+[gd_scene format=3 uid="uid://dwb1woc67nr5m"]
+
+[ext_resource type="PackedScene" uid="uid://cs7jognntfp81" path="res://road.tscn" id="1_bkgx0"]
+[ext_resource type="PackedScene" uid="uid://ynbeljnva6pf" path="res://prefabs/door.tscn" id="2_7r1kg"]
+[ext_resource type="PackedScene" uid="uid://bvn4haekwc71j" path="res://prefabs/outline.tscn" id="3_bkgx0"]
+[ext_resource type="Texture2D" uid="uid://08bph5oxy6sa" path="res://Assets/earth-texture/696.jpg" id="4_uaw8k"]
+[ext_resource type="PackedScene" uid="uid://ctq2t51u5sy02" path="res://prefabs/maze_bush.tscn" id="5_lt5my"]
+[ext_resource type="PackedScene" uid="uid://djakoa6ocxxsj" path="res://prefabs/border.tscn" id="6_uaw8k"]
+[ext_resource type="PackedScene" uid="uid://bhuxmudlohsur" path="res://characters/car.tscn" id="7_uaw8k"]
+[ext_resource type="PackedScene" uid="uid://b21ppau2y811g" path="res://prefabs/lightpost.tscn" id="8_lt5my"]
+[ext_resource type="PackedScene" uid="uid://cib17xj1jx1xh" path="res://scenes/endgame.tscn" id="9_5tstl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_lt5my"]
+sky_top_color = Color(0.32008347, 0.61350834, 0.721498, 1)
+sky_horizon_color = Color(0.7418629, 0.8073428, 0.82693064, 1)
+ground_bottom_color = Color(0.2017752, 0.17027012, 0.1406317, 1)
+ground_horizon_color = Color(0.7418629, 0.8073428, 0.82693064, 1)
+
+[sub_resource type="Sky" id="Sky_5tstl"]
+sky_material = SubResource("ProceduralSkyMaterial_lt5my")
+
+[sub_resource type="Environment" id="Environment_lt7nq"]
+background_mode = 2
+background_energy_multiplier = 0.55
+sky = SubResource("Sky_5tstl")
+ambient_light_energy = 0.0
+tonemap_exposure = 0.1
+glow_enabled = true
+glow_strength = 2.0
+fog_light_energy = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tstl"]
+albedo_texture = ExtResource("4_uaw8k")
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lt7nq"]
+size = Vector3(823, 0.1, 529)
+
+[node name="outside" type="Node3D" unique_id=679307520]
+
+[node name="lighting" type="Node3D" parent="." unique_id=587977764]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="lighting" unique_id=1652791225]
+transform = Transform3D(1, 0, 0, 0, -0.05170844, 0.99866223, 0, -0.99866223, -0.05170844, 0, 23.369001, 0)
+light_color = Color(0, 0, 0, 1)
+light_energy = 100.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+sky_mode = 2
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="lighting" unique_id=162174374]
+environment = SubResource("Environment_lt7nq")
+
+[node name="texts2D" type="Node2D" parent="." unique_id=467397614]
+
+[node name="objectives2" type="Label" parent="texts2D" unique_id=1405096199]
+modulate = Color(0.62152416, 0.6215238, 0.6215237, 1)
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 322.0
+offset_bottom = 113.0
+text = "Objectives:
+- Escape the maze
+- Lose sight of the creature
+- Enter the Lab"
+
+[node name="objectives" type="Label" parent="texts2D" unique_id=37809692]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 322.0
+offset_bottom = 113.0
+text = "Objectives:
+---------------------------
+-----------------------------------------
+- ---------------------
+- enter the car and escape this nightmare"
+
+[node name="HUD" type="Label" parent="texts2D" unique_id=1461750558]
+offset_left = 31.0
+offset_top = 612.0
+offset_right = 114.0
+offset_bottom = 638.0
+text = "Recording:"
+metadata/_edit_use_anchors_ = true
+
+[node name="rec" type="Label" parent="texts2D/HUD" unique_id=1773663585]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_left = -29.0
+offset_top = -70.0
+offset_right = -24.0
+offset_bottom = -47.0
+scale = Vector2(5.6607056, 4.885132)
+text = "."
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD" type="Label" parent="texts2D/HUD" unique_id=1699724420]
+layout_mode = 0
+offset_left = -4.0
+offset_top = -180.0
+offset_right = 79.0
+offset_bottom = -154.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD4" type="Label" parent="texts2D/HUD" unique_id=772626370]
+layout_mode = 0
+offset_left = 1077.0
+offset_top = -178.0
+offset_right = 1160.0
+offset_bottom = -152.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD5" type="Label" parent="texts2D/HUD" unique_id=592905538]
+layout_mode = 0
+offset_left = 1078.0
+offset_top = -450.0
+offset_right = 1161.0
+offset_bottom = -424.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD8" type="Label" parent="texts2D/HUD" unique_id=948527276]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -435.0
+offset_right = 80.0
+offset_bottom = -409.0
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD2" type="Label" parent="texts2D/HUD" unique_id=1080191177]
+layout_mode = 0
+offset_left = -25.000002
+offset_top = -67.0
+offset_right = 58.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD3" type="Label" parent="texts2D/HUD" unique_id=1790514764]
+layout_mode = 0
+offset_left = 986.0
+offset_top = -67.0
+offset_right = 1069.0
+offset_bottom = -41.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD6" type="Label" parent="texts2D/HUD" unique_id=1515872517]
+layout_mode = 0
+offset_left = 987.00006
+offset_top = -414.0
+offset_right = 1070.0
+offset_bottom = -388.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="HUD7" type="Label" parent="texts2D/HUD" unique_id=1997334359]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -400.0
+offset_right = 60.0
+offset_bottom = -374.0
+rotation = -1.5639302
+scale = Vector2(2.0702972, 4.695353)
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="dot" type="Label" parent="texts2D/HUD" unique_id=861675419]
+layout_mode = 0
+offset_left = 537.0
+offset_top = -329.0
+offset_right = 620.0
+offset_bottom = -280.0
+scale = Vector2(2.5741954, 3.0004444)
+text = ".
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="player" parent="." unique_id=1688762371 instance=ExtResource("7_uaw8k")]
+transform = Transform3D(0.39314818, 0, 0, 0, 0.7, 0, 0, 0, 0.56713444, 1, 1.2922871, 2)
+
+[node name="road" parent="." unique_id=1403030906 instance=ExtResource("1_bkgx0")]
+transform = Transform3D(1.6754913, 0, 0, 0, 1, 0, 0, 0, 1.0441836, 0, 0, 2.6084795)
+
+[node name="road2" parent="road" unique_id=344197024 instance=ExtResource("1_bkgx0")]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -132.90092)
+
+[node name="road3" parent="road" unique_id=1712334493 instance=ExtResource("1_bkgx0")]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -190.29376)
+
+[node name="the building" type="Node3D" parent="." unique_id=422734333]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.7062403, -0.7252884, 11.11881)
+
+[node name="StaticBody3D" parent="the building" unique_id=2019557827 instance=ExtResource("2_7r1kg")]
+transform = Transform3D(0.9999953, 0.002921095, -0.0009622449, -0.0029205654, 0.9999956, 0.00055050314, 0.0009638512, -0.0005476859, 0.9999994, 0, 0, 0)
+
+[node name="outline" parent="the building" unique_id=1010771776 instance=ExtResource("3_bkgx0")]
+
+[node name="outline2" parent="the building" unique_id=1609198222 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.385209, -0.19496441)
+
+[node name="outline3" parent="the building" unique_id=1370630082 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.874013, -0.19496441)
+
+[node name="outline4" parent="the building" unique_id=171528038 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 22.452372, -0.19496441)
+
+[node name="outline5" parent="the building" unique_id=1517568427 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 29.851982, -0.19496441)
+
+[node name="outline6" parent="the building" unique_id=1000478310 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44.6105, -0.19496441)
+
+[node name="outline7" parent="the building" unique_id=496905378 instance=ExtResource("3_bkgx0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 37.232937, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="the building" unique_id=263705498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.864067, 0.62601805, -53.176754)
+material_override = SubResource("StandardMaterial3D_5tstl")
+size = Vector3(634.2411, 0.162, 788.81384)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="the building/CSGBox3D" unique_id=958223887]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="the building/CSGBox3D/StaticBody3D" unique_id=1485870966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 242.48805, 0.042420983, 143.4924)
+shape = SubResource("BoxShape3D_lt7nq")
+
+[node name="Maze end" type="Node3D" parent="." unique_id=1811879202]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.5328318, -0.16225147, 45.99074)
+
+[node name="Maze bush66" parent="Maze end" unique_id=1167358594 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.1142893, -0.028417401, 0.005066532, -0.07137327, 2.0314667, 0.006392364, -0.026510015, 0.012911059, -0.994642, -4.405719, 0.9924067, 40.378628)
+
+[node name="Maze bush67" parent="Maze end" unique_id=479698941 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, -20.085644, 0.76241076, 40.30362)
+
+[node name="Maze bush68" parent="Maze end" unique_id=341207281 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.205932, -0.02839729, 0.005067871, -0.07265221, 2.0300295, 0.006394055, -0.02698505, 0.012901924, -0.994905, -35.926422, 0.5993196, 40.23881)
+
+[node name="Maze bush69" parent="Maze end" unique_id=119817052 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, 46.817505, 1.637648, 40.747227)
+
+[node name="Maze bush72" parent="Maze end" unique_id=837609458 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-0.13951205, 0.014114995, -0.9724008, -0.5415352, 2.2131648, 0.006249382, 38.804264, 0.030936727, -0.0034088404, 49.15879, 1.637648, -60.41964)
+
+[node name="Maze bush73" parent="Maze end" unique_id=1880247788 instance=ExtResource("5_lt5my")]
+transform = Transform3D(38.79765, 0.030612666, 0.018381769, -0.5415352, 2.2131648, 0.006249382, -0.7300567, -0.0148046855, 0.9722329, -51.51554, 1.637648, -55.679447)
+
+[node name="Maze bush74" parent="Maze end" unique_id=1054146140 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-1.8421546, -0.015676316, 0.9713062, -0.5415352, 2.2131648, 0.006249382, -38.76077, -0.030175608, -0.04624987, -51.21169, 1.637648, 21.610897)
+
+[node name="Maze bush75" parent="Maze end" unique_id=1911319466 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-1.8421546, -0.015676316, 0.9713062, -0.5415352, 2.2131648, 0.006249382, -38.76077, -0.030175608, -0.04624987, -27.783314, 1.637648, 20.333662)
+
+[node name="Maze bush76" parent="Maze end" unique_id=1530135883 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-1.8421546, -0.015676316, 0.9713062, -0.5415352, 2.2131648, 0.006249382, -38.76077, -0.030175608, -0.04624987, 37.28164, 1.637648, 20.333668)
+
+[node name="Maze bush70" parent="Maze end" unique_id=727244939 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.205932, -0.02839729, 0.0050678714, -0.072652206, 2.0300293, 0.006394054, -0.02698505, 0.012901923, -0.994905, 30.664558, 1.4081889, 40.67222)
+
+[node name="Maze bush71" parent="Maze end" unique_id=130904036 instance=ExtResource("5_lt5my")]
+transform = Transform3D(-5.205932, -0.02839729, 0.005067871, -0.07265221, 2.0300295, 0.006394055, -0.02698505, 0.012901924, -0.994905, 15.032884, 1.1908966, 40.60741)
+
+[node name="border" parent="." unique_id=1754116102 instance=ExtResource("6_uaw8k")]
+transform = Transform3D(1, 0, 0, 0, 23.624323, 0, 0, 0, 772.43115, -22.430939, 0, -90.315544)
+
+[node name="border2" parent="border" unique_id=65373761 instance=ExtResource("6_uaw8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.86678, 0, 0)
+
+[node name="light posts" type="Node3D" parent="." unique_id=326990509]
+
+[node name="lightpost" parent="light posts" unique_id=2130115189 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -6.3171387)
+skeleton = NodePath("../..")
+
+[node name="lightpost3" parent="light posts" unique_id=262808739 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -21.890127)
+skeleton = NodePath("../..")
+
+[node name="lightpost2" parent="light posts" unique_id=1223535760 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -13.528634)
+skeleton = NodePath("../..")
+
+[node name="lightpost4" parent="light posts" unique_id=1980114372 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -37.526997)
+skeleton = NodePath("../..")
+
+[node name="lightpost5" parent="light posts" unique_id=1018263583 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -29.165503)
+skeleton = NodePath("../..")
+
+[node name="lightpost6" parent="light posts" unique_id=1258513903 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -52.335327)
+skeleton = NodePath("../..")
+
+[node name="lightpost7" parent="light posts" unique_id=1371870495 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -43.973835)
+skeleton = NodePath("../..")
+
+[node name="lightpost8" parent="light posts" unique_id=1788970104 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -67.9722)
+skeleton = NodePath("../..")
+
+[node name="lightpost9" parent="light posts" unique_id=245942444 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -59.610703)
+skeleton = NodePath("../..")
+
+[node name="lightpost10" parent="light posts" unique_id=1142832874 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -84.46731)
+skeleton = NodePath("../..")
+
+[node name="lightpost11" parent="light posts" unique_id=552748009 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -76.10582)
+skeleton = NodePath("../..")
+
+[node name="lightpost12" parent="light posts" unique_id=674934198 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -100.10418)
+skeleton = NodePath("../..")
+
+[node name="lightpost13" parent="light posts" unique_id=367478292 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -91.74268)
+skeleton = NodePath("../..")
+
+[node name="lightpost14" parent="light posts" unique_id=2064137903 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -114.912506)
+skeleton = NodePath("../..")
+
+[node name="lightpost15" parent="light posts" unique_id=1392911324 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -106.55102)
+skeleton = NodePath("../..")
+
+[node name="lightpost16" parent="light posts" unique_id=2118079003 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -130.54938)
+skeleton = NodePath("../..")
+
+[node name="lightpost17" parent="light posts" unique_id=90422643 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -122.18788)
+skeleton = NodePath("../..")
+
+[node name="lightpost18" parent="light posts" unique_id=217011986 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -146.7565)
+skeleton = NodePath("../..")
+
+[node name="lightpost19" parent="light posts" unique_id=266304490 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -138.39502)
+skeleton = NodePath("../..")
+
+[node name="lightpost20" parent="light posts" unique_id=215577522 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -162.39337)
+skeleton = NodePath("../..")
+
+[node name="lightpost21" parent="light posts" unique_id=1836502058 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -154.03188)
+skeleton = NodePath("../..")
+
+[node name="lightpost22" parent="light posts" unique_id=464823719 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -177.2017)
+skeleton = NodePath("../..")
+
+[node name="lightpost23" parent="light posts" unique_id=1538397824 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -168.84021)
+skeleton = NodePath("../..")
+
+[node name="lightpost24" parent="light posts" unique_id=1678501856 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -192.83858)
+skeleton = NodePath("../..")
+
+[node name="lightpost25" parent="light posts" unique_id=2106048697 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -184.47708)
+skeleton = NodePath("../..")
+
+[node name="lightpost26" parent="light posts" unique_id=2145374284 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -209.33368)
+skeleton = NodePath("../..")
+
+[node name="lightpost27" parent="light posts" unique_id=434371321 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -200.9722)
+skeleton = NodePath("../..")
+
+[node name="lightpost28" parent="light posts" unique_id=529460695 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -224.97055)
+skeleton = NodePath("../..")
+
+[node name="lightpost29" parent="light posts" unique_id=493301328 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -216.60907)
+skeleton = NodePath("../..")
+
+[node name="lightpost30" parent="light posts" unique_id=635595196 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -239.77888)
+skeleton = NodePath("../..")
+
+[node name="lightpost31" parent="light posts" unique_id=397550572 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -231.41739)
+skeleton = NodePath("../..")
+
+[node name="lightpost32" parent="light posts" unique_id=354280988 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -255.41576)
+skeleton = NodePath("../..")
+
+[node name="lightpost33" parent="light posts" unique_id=1787680291 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -247.05426)
+skeleton = NodePath("../..")
+
+[node name="lightpost34" parent="light posts" unique_id=525919017 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -264.83942)
+skeleton = NodePath("../..")
+
+[node name="lightpost35" parent="light posts" unique_id=530809885 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -288.00922)
+skeleton = NodePath("../..")
+
+[node name="lightpost36" parent="light posts" unique_id=1138514758 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -279.6477)
+skeleton = NodePath("../..")
+
+[node name="lightpost37" parent="light posts" unique_id=1762493750 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -303.6461)
+skeleton = NodePath("../..")
+
+[node name="lightpost38" parent="light posts" unique_id=1829027573 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -295.2846)
+skeleton = NodePath("../..")
+
+[node name="lightpost39" parent="light posts" unique_id=1950522296 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -310.355)
+skeleton = NodePath("../..")
+
+[node name="lightpost41" parent="light posts" unique_id=697275998 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.6555238, 0, -5.8500814, 0, 7.373912, 0, 5.6776667, 0, 0.6754303, -0.885061, -0.0068491697, -325.1633)
+skeleton = NodePath("../..")
+
+[node name="lightpost42" parent="light posts" unique_id=294504418 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -318.8808)
+skeleton = NodePath("../..")
+
+[node name="lightpost43" parent="light posts" unique_id=1653856396 instance=ExtResource("8_lt5my")]
+transform = Transform3D(0.19427946, 0, 5.88554, 0, 7.3739114, 0, -5.712081, 0, 0.20017914, 2.2096925, -0.0068491697, -273.411)
+skeleton = NodePath("../..")
+
+[node name="endgame" parent="." unique_id=1995518334 instance=ExtResource("9_5tstl")]
+transform = Transform3D(32.022507, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -88.988556)

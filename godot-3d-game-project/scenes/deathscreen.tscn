@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bjewohx3vqbiu"]
+
+[ext_resource type="Script" uid="uid://h20es3rf2fml" path="res://scenes/deathscreen.gd" id="1_uurjc"]
+[ext_resource type="Texture2D" uid="uid://c7qdbiqkqgdx0" path="res://Assets/horror game design (1).png" id="2_eye5d"]
+[ext_resource type="PackedScene" uid="uid://u0h4mu1kolvp" path="res://scenes/fade_transition.tscn" id="3_eye5d"]
+
+[node name="deathscreen" type="Node2D" unique_id=1998742191]
+script = ExtResource("1_uurjc")
+
+[node name="HorrorGameDesign(1)" type="Sprite2D" parent="." unique_id=1989079896]
+position = Vector2(598, 481)
+texture = ExtResource("2_eye5d")
+
+[node name="retry" type="Button" parent="." unique_id=192218354]
+offset_left = 486.0
+offset_top = 320.0
+offset_right = 668.0
+offset_bottom = 374.0
+text = "Retry"
+
+[node name="backtomenu" type="Button" parent="." unique_id=1472219825]
+offset_left = 485.0
+offset_top = 383.0
+offset_right = 671.0
+offset_bottom = 448.0
+text = "Back to main menu"
+
+[node name="Fade_transition" parent="." unique_id=1703938721 instance=ExtResource("3_eye5d")]
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=185604916]
+
+[connection signal="pressed" from="retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="backtomenu" to="." method="_on_backtomenu_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
